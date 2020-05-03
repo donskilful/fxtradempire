@@ -1,0 +1,172 @@
+.profile-bg {
+    height: 30rem;
+    box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+    background-image: url(./img/background.jpg);
+}
+.user-image {
+    margin-left: 50rem;
+}
+.avatar {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 18rem;
+}
+.user-info-card {
+    margin-top: 20px;
+}
+.dk-grey-bg {
+    width: 50rem;
+    height: 7rem;
+    background-color: #67757c;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.user-info-card-icon {
+    margin-top: 15px;
+    margin-left: 7px;
+    color: #fff;
+}
+.user-info-head {
+    font-size: 20px;
+    color: #fff;
+    margin-left: 5px;
+    font-family: Poppins, sans-serif;
+    margin-top: -2rem;
+}
+.white-bg {
+    width: 50rem;
+    height: 30rem;
+    background-color: #fff;
+    margin-left: 20px;
+    border-radius: 5px;
+    margin-top: -1.5rem;
+    box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+}
+.line {
+    width: 90%;
+}
+.user-name {
+    padding: 5px 0px 0px 30px;
+    font-weight: 500;
+}
+.un {
+    margin-right: 5px;
+}
+.acct-info-card {
+    margin-left: 70px;
+    margin-top: 20px;
+}
+.acct-info-card-white-bg {
+    width: 50rem;
+    height: 30rem;
+    background-color: #fff;
+    margin-left: 20px;
+    border-radius: 5px;
+    margin-top: -1.5rem;
+    box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+}
+.footer {
+    background: #fff;
+    padding: 15px 0px 15px 25px;
+    color: #455a64;
+    border-top: 1px solid #d2d6de;
+    margin-top: 50px;
+    margin-left: -14px;
+    margin-right: -15px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .profile-bg {
+        height: 30rem;
+        box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+        background-image: url(./img/background.jpg);
+    }
+    .user-image {
+        margin-left: 40rem;
+    }
+    .avatar {
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-top: 12rem;
+        margin-left: -28rem;
+    }
+
+    .profile-bg {
+        height: 25rem;
+        box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+    }
+    
+    .user-info-card {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 95%;
+    }
+    .dk-grey-bg {
+        width: 95%;
+        height: 7rem;
+        background-color: #67757c;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+    .user-info-card-icon {
+        margin-top: 15px;
+        margin-left: 7px;
+        color: #fff;
+    }
+    .user-info-head {
+        font-size: 20px;
+        color: #fff;
+        margin-left: 5px;
+        font-family: Poppins, sans-serif;
+        margin-top: -2rem;
+    }
+    .white-bg {
+        width: 95%;
+        height: 30rem;
+        background-color: #fff;
+        margin-left: 20px;
+        border-radius: 5px;
+        margin-top: -1.5rem;
+        box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+    }
+    .line {
+        width: 90%;
+    }
+    .user-name {
+        padding: 5px 0px 0px 30px;
+        font-weight: 500;
+    }
+    .un {
+        margin-right: 5px;
+    }
+    .acct-info-card {
+        margin-left: -5px;
+        margin-top: 40px;
+    }
+    .acct-info-card-white-bg {
+        width: 95%;
+        height: 30rem;
+        background-color: #fff;
+        margin-left: 20px;
+        border-radius: 5px;
+        margin-top: -1.5rem;
+        box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+    }
+    .footer {
+        background: #fff;
+        padding: 15px 0px 15px 25px;
+        color: #455a64;
+        border-top: 1px solid #d2d6de;
+        margin-top: 50px;
+        margin-left: -14px;
+        margin-right: -15px;
+        text-align: center;
+    }
+}

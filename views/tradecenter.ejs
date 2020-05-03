@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="web/images/favicon.png">
+	<title>Trade Center | Crypto-Exchangerz</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Crypto-</span><strong>Exchangerz</strong></a>
+				<div class="user-icon">
+					<i class="fa fa-user-circle-o fa-2x user" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"><%= firstname %></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li><a href="/tradecenter"><em class="fa fa-bar-chart">&nbsp;</em> Trade Center</a></li>
+			<li><a href="/profile"><em class="fa fa-user">&nbsp;</em> Profile</a></li>
+			<li><a href="/deposit"><em class="fa fa-btc">&nbsp;</em> Deposit</a></li>
+			<li><a href="/withdrawal"><em class="fa fa-money">&nbsp;</em> Withdrawal</a></li>
+			<li><a href="/upgradeaccount"><em class="fa fa-arrow-up">&nbsp;</em> Upgrade Account</a></li>
+			<li><a href="/login"><em class="fa fa-sign-out">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+						<em class="fa fa-home"></em>
+					</a></li>
+				<li class="active">Trade Center</li>
+			</ol>
+		</div>
+		<!--/.row-->
+
+		<div class="row header-title">
+			<div class="col-lg-12">
+				<h3 class="page-header">Trade Center</h3>
+			</div>
+		</div>
+		<!--/.row-->
+
+		<div class="">
+			<div class="row chart-section">
+				<div class="col-md-4 left">
+					<div class="chart-box">
+						<div class="welcome">Welcome:<span class="omam"><%= firstname %></span></div>
+						<div class="welcome">Balance:<span class="price">$ <%= balance %></span></div>
+						<div class="welcome">Trading plan:<div class=" btn-warning basic">Basic</div>
+							<div class="tprog">Trading Progress:<span class="percent"><%= progress %> %</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 middle">
+					<div class="chart-box">
+						<div class="trade-btcoin">
+							Trade Bitcoin with Leverage of up to 1:10;
+							Our Bitcoin Spreads allow you to take short-term
+							positions on the price of Bitcoin
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 right">
+					<div class="chart-box">
+						<div class="trade-btcoin">
+							Trade binary options and digital options with us.
+							Pick the type of option that best suits your trading
+							style and profitability expectations.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.row-->
+		</div>
+		<div style="margin-top: 20px;" class="row">
+			<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+			  {
+				"symbols"; [
+				  {
+					"title": "EUR/USD",
+					"proName": "FX_IDC:EURUSD"
+				  },
+				  {
+					"description": "GBP/USD",
+					"proName": "FX:GBPUSD"
+				  },
+				  {
+					"description": "USD/JPY",
+					"proName": "FX:USDJPY"
+				  },
+				  {
+					"description": "NZD/USD",
+					"proName": "FX:NZDUSD"
+				  },
+				  {
+					"description": "AUD/USD",
+					"proName": "FX:AUDUSD"
+				  }
+				],
+				  "locale"; "en";
+			  }
+			</script>
+		<div class="row">
+			<div class="place-trade col-md-5">
+				<div class="black-bg row">
+					<i class="fa fa-money fa-2x money-icon col-md-8"><span class="place-trade-head">Place
+							Trade</span>
+					</i>
+				</div>
+				<div class="white-bg">
+					<form action="/deposit">
+						<h6 class="balance">Available Balance ($):</h6>
+						<input type="text" class="balance-input" placeholder="$ <%= balance %>" disabled>
+						<h6 class="balance">Trade Type:</h6>
+						<select class="balance-input" name="trade_type" required>
+							<option value="">---Choose Type---</option>
+							<option value="Binary">Binary</option>
+							<option value="Forex">Forex</option>
+						</select>
+						<a href="/deposit"><button name="trade" type="submit"
+								class="btn round btn-success btn-block btn-glow trade-now-btn">
+								TRADE NOW</button></a>
+					</form>
+				</div>
+			</div>
+			<div class="trade-history col-md-5">
+				<div class="trade-history-bg">
+					<div class="row">
+						<i class="fa fa-bar-chart fa-2x trade-money-icon col-md-2"></i>
+						<div class="trade-history-head col-md-5">Trade History</div>
+					</div>
+					<div class="words">
+						You do not have an active trade. Click trade now to start trading
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="margin-top: 20px;" class="col-md-6">
+			<div
+			  style="height:433px; background-color: #ff880e; overflow:hidden; box-sizing: border-box; border: none; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; box-sizing:content-box; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #ff880e; padding: 0px; margin: 0px; width: 99%;">
+			  <div style="height:413px;"><iframe
+				  src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=light&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes"
+				  width="100%" height="409" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"
+				  style="border:0;margin:0;padding:0;"></iframe></div>
+			  <div
+				style="color: #FFFFFF; background-color: #ff880e; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing:content-box; margin: 3px 6px 10px 0px; font-family: Verdana, Tahoma, Arial, sans-serif;">
+				powered by&nbsp;<a href="#" target="_blank"
+				  style="font-weight: 500; color: #FFFFFF; text-decoration:none;font-size:11px">Crypto-Exchangerz</a></div>
+			</div>
+		  </div>
+		  <div  style="margin-top: 20px;"class="col-md-6">
+			<script type="text/javascript">
+			  baseUrl = "https://widgets.cryptocompare.com/";
+			  var scripts = document.getElementsByTagName("script");
+			  var embedder = scripts[scripts.length - 1];
+			  (function () {
+				var appName = encodeURIComponent(window.location.hostname);
+				if (appName == "") { appName = "local"; }
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				var theUrl = baseUrl + 'serve/v1/coin/tiles?fsym=BTC&tsyms=USD,EUR,CNY,GBP,GOLD,JPY,AUD,CAD,CHF,CZK';
+				s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+				embedder.parentNode.appendChild(s);
+			  })();
+			</script>
+		  </div>
+		</div>
+
+		<div class="footer">
+			© 2020 Crypto-Exchangerz. All Rights Reserved.
+		</div>
+
+	</div>
+	<!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		window.onload = function () {
+			var chart1 = document.getElementById("line-chart").getContext("2d");
+			window.myLine = new Chart(chart1).Line(lineChartData, {
+				responsive: true,
+				scaleLineColor: "rgba(0,0,0,.2)",
+				scaleGridLineColor: "rgba(0,0,0,.05)",
+				scaleFontColor: "#c5c7cc"
+			});
+		};
+	</script>
+
+
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+	(function () {
+		var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+		s1.async = true;
+		s1.src = 'https://embed.tawk.to/5e9e944b35bcbb0c9ab3231d/default';
+		s1.charset = 'UTF-8';
+		s1.setAttribute('crossorigin', '*');
+		s0.parentNode.insertBefore(s1, s0);
+	})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>

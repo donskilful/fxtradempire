@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="web/images/favicon.png">
+	<title>Profile | Crypto-Exchangerz</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/profile.css" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Crypto-</span><strong>Exchangerz</strong></a>
+				<div class="user-icon">
+					<i class="fa fa-user-circle-o fa-2x user" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"><%= firstname %></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li class="active"><a href="/tradecenter"><em class="fa fa-bar-chart">&nbsp;</em> Trade Center</a></li>
+			<li><a href="/profile"><em class="fa fa-user">&nbsp;</em> Profile</a></li>
+			<li><a href="/deposit"><em class="fa fa-btc">&nbsp;</em> Deposit</a></li>
+			<li><a href="/withdrawal"><em class="fa fa-money">&nbsp;</em> Withdrawal</a></li>
+			<li><a href="/upgradeaccount"><em class="fa fa-arrow-up">&nbsp;</em> Upgrade Account</a></li>
+			<li><a href="/login"><em class="fa fa-sign-out">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Profile</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row header-title">
+			<div class="col-lg-12">
+				<h3 class="page-header">Profile</h3>
+			</div>
+		</div><!--/.row-->
+
+		<div class="profile-bg">
+			<div class="user-image">
+				<img src="img/userimage.png" alt="user-avatar" class="avatar">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 user-info-card">
+				<div class="dk-grey-bg row">
+					<i class="fa fa-user fa-2x user-info-card-icon col-md-9"> <span class="user-info-head">User Info</span></i>
+				</div>
+				<div class="white-bg">
+					<div class="user-name"><i class="fa fa-user un"></i>First name: &nbsp; <%= firstname %></div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-user un"></i>Last name: &nbsp; <%= lastname %></div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-envelope un"></i>Email: &nbsp; <%= email %></div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-phone un"></i>Phone Number: &nbsp; <%= phone %></div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-home un"></i>Country of Residence: &nbsp; <%= country %><i class="fa fa-flag"></i></div>
+				</div>
+			</div>
+			<div class="col-md-5 acct-info-card">
+				<div class="dk-grey-bg row">
+					<i class="fa fa-envelope-open fa-2x user-info-card-icon col-md-9"> <span class="user-info-head">Account Info</span></i>
+				</div>
+				<div class="acct-info-card-white-bg">
+					<div class="user-name"><i class="fa fa-money un"></i>Available Balance: &nbsp; $ <%= balance %></div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-line-chart un"></i>Trade Progress: &nbsp; <%= progress %> %</div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-cogs un"></i>Account Status: &nbsp; Active</div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-dashboard un"></i>Account Type: &nbsp; Live Trading Account</div>
+					<hr class="line" />
+					<div class="user-name"><i class="fa fa-bar-chart un"></i>Trading Plans: &nbsp; Basic</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			© 2020 Crypto-Exchangerz. All Rights Reserved.
+		</div>
+	</div>	<!--/.main-->
+	  
+
+<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+
+
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+	(function () {
+		var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+		s1.async = true;
+		s1.src = 'https://embed.tawk.to/5e9e944b35bcbb0c9ab3231d/default';
+		s1.charset = 'UTF-8';
+		s1.setAttribute('crossorigin', '*');
+		s0.parentNode.insertBefore(s1, s0);
+	})();
+</script>
+<!--End of Tawk.to Script-->
+	
+</body>
+</html>

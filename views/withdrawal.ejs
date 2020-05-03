@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="web/images/favicon.png">
+	<title>Withdrawal | Crypto-Exchangerz</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/withdrawal.css">
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Crypto-</span><strong>Exchangerz</strong></a>
+				<div class="user-icon">
+					<i class="fa fa-user-circle-o fa-2x user" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"><%= firstname %></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li class="active"><a href="/tradecenter"><em class="fa fa-bar-chart">&nbsp;</em> Trade Center</a></li>
+			<li><a href="/profile"><em class="fa fa-user">&nbsp;</em> Profile</a></li>
+			<li><a href="/deposit"><em class="fa fa-btc">&nbsp;</em> Deposit</a></li>
+			<li><a href="/withdrawal"><em class="fa fa-money">&nbsp;</em> Withdrawal</a></li>
+			<li><a href="/upgradeaccount"><em class="fa fa-arrow-up">&nbsp;</em> Upgrade Account</a></li> 
+			<li><a href="/login"><em class="fa fa-sign-out">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+						<em class="fa fa-home"></em>
+					</a></li>
+				<li class="active">Withdraw Funds</li>
+			</ol>
+		</div>
+		<!--/.row-->
+
+		<div class="row header-title">
+			<div class="col-lg-12">
+				<h3 class="page-header">Withdraw Funds</h3>
+			</div>
+		</div>
+		<!--/.row-->
+
+		<div class="row">
+			<div class="col-md-4 left">
+				<div class="chart-box">
+					<div class="welcome">Welcome:<span class="omam"><%= firstname %></span></div>
+					<div class="welcome">Balance:<span class="price">$ <%= balance %></span></div>
+					<div class="welcome">Trading plan:<div class=" btn-warning basic">Basic</div>
+						<div class="tprog">Trading Progress:<span class="percent"><%= progress %> %</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-5 withdrawal-request-card">
+				<div class="dk-grey-bg row">
+					<i class="fa fa-money fa-2x withdrawal-request-card-icon col-md-9"> <span
+							class="withdrawal-request-head">Withdrawal Request</span></i>
+				</div>
+				<div class="white-bg">
+					<form action="" method="">
+						<h6 class="withdraw-method">Enter Bitcoin Wallet Address</h6>
+						<input type="text" name="btc" id="btc" class="withdraw-method-input" placeholder="Bitcoin address" value="<%= typeof btc != 'undefined' ? btc : '' %>" required>
+
+						<h6 class="withdraw-method">Enter Withdrawal Amount</h6>
+						<input type="text" name="amount" id="amount"  class="withdraw-method-input" placeholder="0.00" value="<%= typeof amount != 'undefined' ? amount : '' %>" required>
+						<button  name="trade" id="trade" type="submit"
+							class="btn round btn-success btn-block btn-glow trade-now-btn" type="submit">
+							<i class="fa fa-check-square"></i> Proceed</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-5 withdrawal-faq-card">
+				<div class="dk-grey-bg row">
+					<i class="fa fa-envelope-open fa-2x withdrawal-request-card-icon col-md-9"> <span
+							class="withdrawal-request-head">Withdrawal FAQ</span>
+					</i>
+				</div>
+				<div class="withdrawal-faq-card-white-bg">
+					<div class="box-body withdrawal-faq-contents">
+						<h6 style="color: #1E9FF2;"><strong>Withdrawing Funds – How Does It Work? </strong></h6>
+						At CryptoExchangerz, we have designed our withdrawal process <br> to be as easy as our funding
+						process.
+						To begin the withdrawal <br> process first select your preferred withdrawal method and then type
+						in the
+						amount you want to withdraw and click "Proceed". <br><br>
+
+						<h6 style="color: #1E9FF2;"><strong>What Methods Are There For Withdrawal Of Funds? </strong>
+						</h6>
+						CryptoExchangerz provides three(3) withdrawal methods (Bitcoin, Paypal, and Direct Bank
+						Transfer). <br><br>
+
+						<h6 style="color: #1E9FF2;"><strong>Must Withdrawal Requests Only Be Made At Certain Times?
+							</strong></h6>
+						Requests for withdrawals can be made at any time via the CryptoExchangerz site. The requests
+						will be processed immediately, and during the relevant financial institution's business
+						hours.<br><br>
+
+						<h6 style="color: #1E9FF2;"><strong>Is There A Withdrawal Limit? </strong></h6>
+						Withdrawals are capped at the amount of funds that are currently in the account. <br><br>
+
+						<h6 style="color: #1E9FF2;"><strong>How Long Does It Take To Get My Money? </strong></h6>
+						Withdrawal requests are addressed and handled as quickly as possible.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row container-fluid">
+			<div class="latest-deposit col-md-5">
+				<div class="ld-title">Latest Deposits</div>
+				<hr class="dw-line">
+
+				<table class="ld-table">
+					<tr>
+						<th>Name</th>
+						<th>Amount</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td>John frida</td>
+						<td>$100.00</td>
+						<td>02-02-2020</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="latest-withdrawal col-md-5">
+				<div class="lw-title">Latest Withdrawals</div>
+				<hr class="dw-line">
+				<table class="ld-table">
+					<tr>
+						<th>Name</th>
+						<th>Amount</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td>Limbat Doe</td>
+						<td>$400.00</td>
+						<td>02-04-2020</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="footer">
+			© 2020 Crypto-Exchangerz. All Rights Reserved.
+		</div>
+	</div>
+	<!--/.main-->
+
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+
+
+</script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+	(function () {
+		var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+		s1.async = true;
+		s1.src = 'https://embed.tawk.to/5e9e944b35bcbb0c9ab3231d/default';
+		s1.charset = 'UTF-8';
+		s1.setAttribute('crossorigin', '*');
+		s0.parentNode.insertBefore(s1, s0);
+	})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>

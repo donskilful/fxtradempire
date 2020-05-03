@@ -1,0 +1,20 @@
+.active-input {
+    width: 15rem;
+    border: 1px solid goldenrod;
+}
+.active-input:focus {
+    outline: none;
+}
+
+
+
+@media only screen and ( max-width: 768px) {
+
+    .breadcrumb {
+        border-radius: 0;
+        padding: 10px 15px 10px 15px;
+        background: #e9ecf2;
+        margin: 0;
+        width: 95%;
+    }
+}

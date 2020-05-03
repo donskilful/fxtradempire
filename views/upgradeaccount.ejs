@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="web/images/favicon.png">
+	<title>Upgrade Account | Crypto-Exchangerz</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/upgrade-account.css">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Crypto-</span><strong>Exchangerz</strong></a>
+				<div class="user-icon">
+					<i class="fa fa-user-circle-o fa-2x user" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"><%= firstname %></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li class="active"><a href="/tradecenter"><em class="fa fa-bar-chart">&nbsp;</em> Trade Center</a></li>
+			<li><a href="/profile"><em class="fa fa-user">&nbsp;</em> Profile</a></li>
+			<li><a href="/deposit"><em class="fa fa-btc">&nbsp;</em> Deposit</a></li>
+			<li><a href="/withdrawal"><em class="fa fa-money">&nbsp;</em> Withdrawal</a></li>
+			<li><a href="/upgradeaccount"><em class="fa fa-arrow-up">&nbsp;</em> Upgrade Account</a></li>
+			<li><a href="/login"><em class="fa fa-sign-out">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Account Upgrade</li>
+			</ol>
+		</div>
+		
+		<div class="row header-title">
+			<div class="col-lg-12">
+				<h3 class="page-header">Account Upgrade</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<h6 class="header-paragraph">Upgrade your trading account to a level that best fits your 
+				trading experience and have access to several trading benefits. <br>Your current account level is 
+				<code class="code">"Basic"</code>
+			</h6>
+		</div>
+		<div class="row container-fluid acct-types">
+			<div class="col-md-3 blue">
+				<div class="title">BASIC</div>
+				<div class="cost">$ 250</div>
+				<div class="bcontent">24x7 Support</div>
+				<div class="bcontent">Professional Charts</div>
+				<div class="bcontent">Trading Alerts</div>
+				<div class="bcontent">Trading Central Basic</div>
+
+				<button class="btn btn-info basic-btn" data-toggle="modal" data-target="#exampleModal1">Choose This</button>
+			</div>
+			<div class="col-md-3 silver">
+				<div class="title">SILVER</div>
+				<div class="cost">$ 1000</div>
+				<div class="bcontent">24x7 Support</div>
+				<div class="bcontent">Professional Charts</div>
+				<div class="bcontent">Trading Alerts</div>
+				<div class="bcontent">Trading Central Intermediate</div>
+
+				<button class="btn silver-btn" data-toggle="modal" data-target="#exampleModal1">Choose This</button>
+			</div>
+			<div class="col-md-3 gold">
+				<div class="title">GOLD</div>
+				<div class="cost">$ 3000</div>
+				<div class="bcontent">24x7 Support</div>
+				<div class="bcontent">Professional Charts</div>
+				<div class="bcontent">Trading Alerts</div>
+				<div class="bcontent">Trading Central Professional</div>
+				<div class="bcontent">Live Trading With Expert</div>
+
+				<button class="btn gold-btn" data-toggle="modal" data-target="#exampleModal1">Choose This</button>
+			</div>
+			<div class="col-md-3 platinum">
+				<div class="title">PLATINUM</div>
+				<div class="cost">$ 6000</div>
+				<div class="bcontent">24x7 Support</div>
+				<div class="bcontent">Professional Charts</div>
+				<div class="bcontent">Trading Alerts</div>
+				<div class="bcontent">Trading Central Premium</div>
+				<div class="bcontent">Live Trading With Expert</div>
+				<div class="bcontent">SMS & EMail Alerts</div>
+
+				<button class="btn platinum-btn" data-toggle="modal" data-target="#exampleModal1">Choose This</button>
+			</div>
+		</div>
+
+		<!--Modal content-->
+
+		<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"><strong>Account Upgrade</strong></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					To upgrade your Crypto-Exchangerz trading account to a higher level, please contact our Live 
+					Chat agent to receive the appropriate payment details. Alternatively, you can contact your 
+					Account Manager to help you with the account upgrade.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="footer">
+			© 2020 Crypto-Exchangerz. All Rights Reserved.
+		</div>
+	</div>	<!--/.main-->
+	  
+
+	
+		<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+
+
+
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+	(function () {
+		var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+		s1.async = true;
+		s1.src = 'https://embed.tawk.to/5e9e944b35bcbb0c9ab3231d/default';
+		s1.charset = 'UTF-8';
+		s1.setAttribute('crossorigin', '*');
+		s0.parentNode.insertBefore(s1, s0);
+	})();
+</script>
+<!--End of Tawk.to Script-->
+	
+</body>
+</html>

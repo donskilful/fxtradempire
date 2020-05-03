@@ -1,0 +1,119 @@
+.header-paragraph {
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px;
+}
+.bg {
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+    background-color: #fff;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+.img {
+    width: 20rem;
+    margin: 15px 0px 0px 10px;
+    border-radius: 5px;
+}
+.img-mg {
+    width: 22rem;
+    margin: 15px 0px 0px 10px;
+    border-radius: 5px;
+    height: 14rem;
+}
+.img-wu {
+    width: 20rem;
+    margin: 15px 0px 0px 10px;
+    border-radius: 5px;
+    height: 14rem;
+}
+.choose-this {
+    width: 19rem;
+    height: 4rem;
+    background-color: #0fc491;
+    border: none;
+    padding: 7px 20px;
+    color: white;
+    margin-left: 15px;
+    border-radius: 5px;
+    margin-top: 4rem;
+    transition: ease-out 0.9s;
+}
+.choose-this:hover {
+    background-color: rgb(197, 132, 195);
+    transition: ease-in-out 0.9s;
+}
+.footer {
+    background: #fff;
+    padding: 15px 0px 15px 25px;
+    color: #455a64;
+    border-top: 1px solid #d2d6de;
+    margin-top: 90px;
+    margin-left: -14px;
+    margin-right: -15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header-paragraph {
+        line-height: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        margin: 20px;
+    }
+    .bg {
+        width: 90%;
+        margin-bottom: 30px;
+        height: 27rem;
+        box-shadow: 0px 0px 5px 0px rgba(142, 139, 133, 0.32) !important;
+        background-color: #fff;
+        margin-left: 25px;
+        border-radius: 5px;
+    }
+
+    .img {
+        width: 27rem;
+        margin: 15px 0px 0px 10px;
+        border-radius: 5px;
+    }
+    .img-mg {
+        width: 27rem;
+        margin: 15px 0px 0px 10px;
+        border-radius: 5px;
+        height: 19rem;
+    }
+    .img-wu {
+        width: 27rem;
+        margin: 15px 0px 0px 10px;
+        border-radius: 5px;
+        height: 19rem;
+    }
+    .choose-this {
+        width: 80%;
+        height: 4rem;
+        background-color: #0fc491;
+        border: none;
+        padding: 7px 20px;
+        color: white;
+        margin-left: 30px;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: ease-out 0.9s;
+    }
+    .choose-this:hover {
+        background-color: rgb(197, 132, 195);
+        transition: ease-in-out 0.9s;
+    }
+    .footer {
+        background: #fff;
+        padding: 15px 0px 15px 25px;
+        color: #455a64;
+        border-top: 1px solid #d2d6de;
+        margin-top: 90px;
+        margin-left: -14px;
+        margin-right: -15px;
+        text-align: center;
+    }
+}
