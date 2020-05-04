@@ -7,6 +7,8 @@ bcrypt = require("bcryptjs");
 methodOverride          =require("method-override");
 const { ensureAuthenticated, forwardAuthenticated } = require("./config/auth");
 
+require("dotenv").config();
+
 
 const app = express();
 
